@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/SpellBook/static/css/main.bc4384b8.chunk.css",
+    "main.js": "/SpellBook/static/js/main.643d28ee.chunk.js",
+    "main.js.map": "/SpellBook/static/js/main.643d28ee.chunk.js.map",
+    "runtime-main.js": "/SpellBook/static/js/runtime-main.f0dd9ede.js",
+    "runtime-main.js.map": "/SpellBook/static/js/runtime-main.f0dd9ede.js.map",
+    "static/css/2.eb45ad44.chunk.css": "/SpellBook/static/css/2.eb45ad44.chunk.css",
+    "static/js/2.3e9d35cc.chunk.js": "/SpellBook/static/js/2.3e9d35cc.chunk.js",
+    "static/js/2.3e9d35cc.chunk.js.map": "/SpellBook/static/js/2.3e9d35cc.chunk.js.map",
+    "index.html": "/SpellBook/index.html",
+    "precache-manifest.a1982384e474753bcfe0546b015515c7.js": "/SpellBook/precache-manifest.a1982384e474753bcfe0546b015515c7.js",
+    "service-worker.js": "/SpellBook/service-worker.js",
+    "static/css/2.eb45ad44.chunk.css.map": "/SpellBook/static/css/2.eb45ad44.chunk.css.map",
+    "static/css/main.bc4384b8.chunk.css.map": "/SpellBook/static/css/main.bc4384b8.chunk.css.map",
+    "static/js/2.3e9d35cc.chunk.js.LICENSE": "/SpellBook/static/js/2.3e9d35cc.chunk.js.LICENSE",
+    "static/media/logo.svg": "/SpellBook/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0dd9ede.js",
+    "static/css/2.eb45ad44.chunk.css",
+    "static/js/2.3e9d35cc.chunk.js",
+    "static/css/main.bc4384b8.chunk.css",
+    "static/js/main.643d28ee.chunk.js"
+  ]
+}
