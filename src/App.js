@@ -33,7 +33,8 @@ class App extends Component {
     if (this.state.searchUrl){
       fetch(this.state.searchUrl)
         .then(response=>response.json())
-        .then(spell => this.setState({result: spell}));
+        .then(spell => this.setState({result: spell}))
+        .catch(() => console.log("Search Error"));
     }
     // console.log(this.urlifySpell(this.state.searchfield));
     console.log(this.state.searchUrl);
@@ -65,10 +66,11 @@ class App extends Component {
         } else {
           window.alert("No result found");
         }
-    });
+    })
+      .catch(() => console.log("Urlify Error"));
 
-    console.log("spellurl " + spellUrl);
-    console.log("searchurl " + this.state.searchUrl);
+    // console.log("spellurl " + spellUrl);
+    // console.log("searchurl " + this.state.searchUrl);
 
   }
 
