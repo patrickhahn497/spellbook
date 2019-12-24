@@ -10,6 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      //class: {},   this is to be used when we implement class functionality
       searchfield: '',
       result: {name: "",
                 desc: "",
@@ -34,13 +35,14 @@ class App extends Component {
         .then(response=>response.json())
         .then(spell => this.setState({result: spell}));
     }
-    console.log(this.urlifySpell(this.state.searchfield));
+    // console.log(this.urlifySpell(this.state.searchfield));
+    console.log(this.state.searchUrl);
+    console.log(this.state.searchfield);
 
   }
 
   onSearchClick = (event) => {
     this.search();
-
   }
 
   onEnter = (event) => {
@@ -66,11 +68,12 @@ class App extends Component {
     });
 
     console.log("spellurl " + spellUrl);
-    console.log("searchurl " + this.state.searchurl);
+    console.log("searchurl " + this.state.searchUrl);
 
   }
 
   render() {
+
     const {name, desc, range, level, higher_level, duration, concentration, casting_time} = this.state.result;
 
     return (
