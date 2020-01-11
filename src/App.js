@@ -22,7 +22,7 @@ class App extends Component {
 
 
   onSearchChange = (event) => {
-    this.setState({searchfield: event.target.value});
+    this.setState({searchfield: event.target.value.toLowerCase()});
     console.log("searchfield: " + this.state.searchfield);
     // console.log("search url" + this.state.searchUrl);
   }
@@ -30,6 +30,7 @@ class App extends Component {
 
   search = () => {
     this.urlifySpell(this.state.searchfield);
+    console.log(this.state.searchUrl);
     if (this.state.searchUrl){
       fetch(this.state.searchUrl)
         .then(response=>response.json())
@@ -47,7 +48,7 @@ class App extends Component {
   }
 
   onEnter = (event) => {
-    if (event.which==13 || event.keyCode==13){
+    if (event.which===13 || event.keyCode===13){
       event.preventDefault();
       this.search();
     }
@@ -56,18 +57,21 @@ class App extends Component {
 
   urlifySpell(text) {
     const queries = text.split(" ");
-    const linkUrl = 'http://www.dnd5eapi.co/api/spells/?name=' + queries.join("+");
+    // const linkUrl = 'https://www.dnd5eapi.co/api/spells/?name=' + queries.join("+");
+    const linkUrl = 'https://www.dnd5eapi.co/api/spells/' + queries.join("-");
     var spellUrl = '';
-    fetch(linkUrl)
-      .then(response=>response.json())
-      .then(result=> {
-        if (result.count >=1){
-          this.setState({searchUrl: result.results[0].url});
-        } else {
-          window.alert("No result found");
-        }
-    })
-      .catch(() => console.log("Urlify Error"));
+    console.log(linkUrl);
+    this.setState({searchUrl: linkUrl});
+    // fetch(linkUrl)
+    //   .then(response=>response.json())
+    //   .then(result=> {
+    //     if (result.count){
+    //       this.setState({searchUrl: result.results[0].url});
+    //     } else {
+    //       window.alert("No result found");
+    //     }
+    // })
+    //   .catch(() => console.log("Urlify Error"));
 
     // console.log("spellurl " + spellUrl);
     // console.log("searchurl " + this.state.searchUrl);
