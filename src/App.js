@@ -4,6 +4,7 @@ import './App.css';
 import 'tachyons';
 import SearchBox from './components/SearchBox'
 import SpellPanel from './components/SpellPanel'
+import ClassPanel from './components/ClassPanel'
 
 class App extends Component {
 
@@ -57,7 +58,7 @@ class App extends Component {
   urlifySpell(text) {
     const queries = text.split(" ");
     const linkUrl = 'http://www.dnd5eapi.co/api/spells/?name=' + queries.join("+");
-    var spellUrl = '';
+    //var spellUrl = '';
     fetch(linkUrl)
       .then(response=>response.json())
       .then(result=> {
@@ -86,6 +87,7 @@ class App extends Component {
         <SearchBox searchClick={this.onSearchClick} searchfield={this.state.searchfield} searchChange={this.onSearchChange} onEnter={this.onEnter}/>
         <SpellPanel name={name} desc={desc} range={range} level={level} higher_level={higher_level} duration={duration} concentration={concentration}
           casting_time={casting_time}/>
+        <ClassPanel/>
       </div>
       );
 

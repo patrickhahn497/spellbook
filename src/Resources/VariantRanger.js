@@ -1,7 +1,7 @@
 
 // we keep features in an array of features just in case there's more than one feature for a level
 
-const variantRanger = {
+export const variantRanger = {
 
 	1: [
 			{
@@ -21,30 +21,27 @@ const variantRanger = {
 						text: "As an action, you can give yourself a number of temporary hit points equal to 1d10 + your Wisdom modifier. You can use this special action a number of times equal to your Wisdom modifier (a minimum of once), and you regain all expended uses when you finish a long rest. In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1."
 					}
 
-				]
+				],
 
 				text: "You are an unsurpassed explorer and survivor. Choose one of the following benefits, "+ 
-				"and then choose another one at 6th and 10th level. \nCanny Choose one skill: Animal Handling,"+
-				" Athletics, History, Insight, Investigation, Medicine, Nature, Perception, Stealth, or Survival."+
-				" You gain proficiency in the chosen skill if you don’t already have it, and you can add double your"+
-				"proficiency bonus to ability checks using that skill. In addition, thanks to your extensive wandering, you are able to speak, read, and write two languages of your choice. \nRoving Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed. \nTireless As an action, you can give yourself a number of temporary hit points equal to 1d10 + your Wisdom modifier. You can use this special action a number of times equal to your Wisdom modifier (a minimum of once), and you regain all expended uses when you finish a long rest. In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1."
+				"and then choose another one at 6th and 10th level."
 			},
 			{
 				name: "Favored Foe",
 				text: "You can call on your bond with nature to mark a creature as your favored enemy for a time: you know the hunter’s mark spell, and Wisdom is your spellcasting ability for it. You can use it a certain number of times without expending a spell slot and without requiring concentration— a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest. When you gain the Spellcasting feature at 2nd level, hunter’s mark doesn’t count against the number of ranger spells you know."
 			}
-		]
+		],
 
 	3: [
 			{
 				name: "Primal Awareness",
-				spells: [
+				spells: {
 					3: ["Detect Magic", "Speak with Animals"],
 					5: ["Beast Sense", "Locate Animals or Plants"],
 					9: ["Speak with Plants"],
 					13: ["Locate Creature"],
 					17: ["Commune with Nature"]
-				],
+				},
 				text: "You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don’t already know them, as shown in the Primal Awareness Spells table. These spells don’t count against the number of ranger spells you know. \n You can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can’t do so again until you finish a long rest."
 			}
 		],
@@ -77,7 +74,7 @@ const variantRanger = {
 	],
 	8: [
 			{
-				name: "Fleet of Foot"
+				name: "Fleet of Foot",
 				text: "Beginning at 8th level, you can use the Dash action as a bonus action on your turn."
 			}
 		],
@@ -108,3 +105,4 @@ const variantRanger = {
 		]
 
 };
+
